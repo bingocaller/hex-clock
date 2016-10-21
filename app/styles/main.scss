@@ -13,8 +13,8 @@
   font-size: 15vw;
   text-align: center;
   color: #fff;
-}
-#clock::before {
-  content: '#';
-  opacity: .25;
+  &::before {
+    content: '#';
+    opacity: .25;
+  }
 }
