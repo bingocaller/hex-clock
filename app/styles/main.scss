@@ -1,28 +1,20 @@
-body {
-  background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+#background {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
 }
-
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+#clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Fira Mono', 'Source Code Pro', Hack, 'DejaVu Sans Mono', monospace;
+  font-size: 15vw;
+  text-align: center;
+  color: #fff;
 }
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+#clock::before {
+  content: '#';
+  opacity: .25;
 }
