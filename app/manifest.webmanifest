@@ -9,8 +9,14 @@
   "theme_color": "#232323",
   "background_color": "#000",
   "description": "Jacopo Colò's Hex Clock as a web app.",
-  "icons": [{
-    "src": "images/hd_hi.svg",
-    "sizes": "48x48 72x72 96x96 128x128 144x144 168x168 192x192 256x256"
-  }]
+  "icons": [
+    {
+      "src": "images/hex_clock.svg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "192x192"
+    }
+  ]
 }
