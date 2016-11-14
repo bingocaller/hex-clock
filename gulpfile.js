@@ -1,11 +1,10 @@
 // generated on 2016-10-21 using generator-webapp 2.2.0
 const gulp = require('gulp');
-const gulpLoadPlugins = require('gulp-load-plugins');
+const $ = require('gulp-load-plugins')();
 const browserSync = require('browser-sync');
 const del = require('del');
 const runSequence = require('run-sequence');
 
-const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
@@ -54,6 +53,7 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
+    .pipe($.if(process.env.NODE_ENV === 'production', $.inlineSource()))
     .pipe(gulp.dest('dist'));
 });
 
