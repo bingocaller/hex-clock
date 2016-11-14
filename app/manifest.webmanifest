@@ -6,7 +6,7 @@
   "display": "fullscreen",
   "lang": "en-US",
   "orientation": "landscape-primary",
-  "theme_color": "#232323",
+  "theme_color": "#235959",
   "background_color": "#000",
   "description": "Jacopo Colò's Hex Clock as a web app.",
   "icons": [
