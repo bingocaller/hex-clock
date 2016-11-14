@@ -18,6 +18,7 @@
     "gulp-htmlmin": "^3.0.0",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^3.0.1",
+    "gulp-inline-source": "^3.0.0",
     "gulp-load-plugins": "^1.2.4",
     "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.0",
