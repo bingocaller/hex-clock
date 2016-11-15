@@ -4,8 +4,15 @@ const $ = require('gulp-load-plugins')();
 const browserSync = require('browser-sync');
 const del = require('del');
 const runSequence = require('run-sequence');
+const argv = require('yargs').argv;
 
 const reload = browserSync.reload;
+
+const buildTasks = $.if(
+  argv.inline,
+  ['lint', 'html', 'inline', 'images', 'extras'],
+  ['lint', 'html', 'images', 'extras']
+);
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -53,8 +60,13 @@ gulp.task('html', ['styles', 'scripts'], () => {
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
-    .pipe($.if(process.env.NODE_ENV === 'production', $.inlineSource()))
     .pipe(gulp.dest('dist'));
+});
+
+gulp.task('inline', ['html'], () => {
+  return gulp.src('dist/*.html')
+  .pipe($.inlineSource())
+  .pipe(gulp.dest('dist'));
 });
 
 gulp.task('images', () => {
@@ -104,7 +116,7 @@ gulp.task('serve:dist', () => {
   });
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'extras'], () => {
+gulp.task('build', buildTasks, () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
