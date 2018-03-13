@@ -8,11 +8,7 @@ const argv = require('yargs').argv;
 
 const reload = browserSync.reload;
 
-const buildTasks = $.if(
-  argv.inline,
-  ['lint', 'html', 'inline', 'images', 'extras'],
-  ['lint', 'html', 'images', 'extras']
-);
+const buildTasks = argv.inline ? ['lint', 'html', 'inline', 'images', 'extras'] : ['lint', 'html', 'images', 'extras'];
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
