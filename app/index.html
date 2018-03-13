@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A straight-up rip-off of Jacopo Colò's Hex Clock, but bigger!" />
+    <meta name="description" content="My version of Hugo Giraudel's Color Clock Experiment" />
     <meta name="theme-color" content="#000000">
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Hex Clock" />
-    <meta property="og:description" content="A straight-up rip-off of Jacopo Colò's Hex Clock, but bigger!" />
-    <meta property="og:image" content="https://hex-clock.surge.sh/images/hex-clock_animation.gif" />
-    <meta property="og:url" content="https://hex-clock.surge.sh" />
-    <title>Hex Clock</title>
+    <meta property="og:title" content="RGB Clock" />
+    <meta property="og:description" content="My version of Hugo Giraudel's Color Clock Experiment" />
+    <meta property="og:url" content="https://rgb-clock.jespers.site" />
+    <title>RGB Clock</title>
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -19,10 +18,10 @@
     <link rel="stylesheet" href="styles/main.css" media="screen">
     <!-- endbuild -->
   </head>
-  <body id="background">
-    <div id="clock">000000</div>
-    <!-- build:js scripts/main.js inline -->
-    <script src="scripts/main.js" charset="utf-8"></script>
+  <body class="background">
+    <div class="clock">000000</div>
+    <!-- build:js scripts/colour-adjusted.js inline -->
+    <script src="scripts/colour-adjusted.js" charset="utf-8"></script>
     <!-- endbuild -->
   </body>
 </html>
