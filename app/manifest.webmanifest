@@ -1,6 +1,6 @@
 {
-  "name": "Hexadecimal Color Clock",
-  "short_name": "Hex Clock",
+  "name": "RGB Color Clock",
+  "short_name": "RGB Clock",
   "start_url": ".",
   "scope": "/",
   "display": "fullscreen",
@@ -8,10 +8,10 @@
   "orientation": "landscape-primary",
   "theme_color": "#000000",
   "background_color": "#000",
-  "description": "Jacopo Colò's Hex Clock as a web app.",
+  "description": "Hugo Giraudel's Color Clock as a web app.",
   "icons": [
     {
-      "src": "images/hex_clock.svg",
+      "src": "images/rgb_clock.svg",
       "sizes": "192x192"
     },
     {
