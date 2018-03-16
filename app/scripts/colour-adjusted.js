@@ -19,7 +19,7 @@ function colorFromRGB(red, green, blue) {
 
 // Get formatted date
 function dateToContent(date) {
-  return date.toTimeString().replace(/.*(\d{2}):(\d{2}):(\d{2}).*/, '$1$2$3');
+  return date.toTimeString().replace(/.*(\d{2}):(\d{2}):(\d{2}).*/, '$1:$2:$3');
 }
 
 function colorClock() {
